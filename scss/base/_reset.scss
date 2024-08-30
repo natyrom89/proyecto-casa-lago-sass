@@ -1,7 +1,29 @@
 
 
-//Reset de Márgenes y Rellenos
-body, h1, h2, h3, p, ul, ol, li {
+//Reset de margenes y rellenos
+h1, h2, h3, p, ul, ol, li {
     margin: 0;
     padding: 0;
+}
+
+//Estilo de listas 
+ul, ol {
+    list-style: none; /* Elimina los puntos de lista */
+}
+
+
+//Estilos generales de texto y fuente 
+body {
+    font-family: $font-family-primary;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-text;
+    background-color: $background-color;
+}
+
+
+//Reset de imagenes 
+img {
+    height: auto;
+    display: block;
 }

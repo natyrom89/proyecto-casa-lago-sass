@@ -1,7 +1,18 @@
+
+//base
 @import "base/vars";
 @import "base/reset";
 
+//components
+@import "components/header";
+@import "components/footer";
+@import "components/navigation";
 
+//Layout
+@import "layout/contacto";
+@import "layout/mediaqueries-700";
+@import "layout/mediqueries-1200";
+@import "layout/mediaqueries-900";
 
 
 
@@ -13,223 +24,12 @@
   }
 
 
-body {
-    font-family: $font-family-primary;
-    background-color: $background-color;
-    color:$color-text;
-    font-family: $font-family-primary;
-
-    header {
-      background-color: $background-color; /* Color de fondo del header */
-      padding: 10px 10px; /* Espaciado dentro del header */
-      position: relative; /* Fija el header en la parte superior de la página */
-      top: 0; /* Alinea el header en la parte superior */
-      left: 0; /* Alinea el header a la izquierda */
-      width: 100%; /* Hace que el header ocupe todo el ancho de la página */
-      display: flex;
-      justify-content: space-between; /* Distribuye espacio entre el logo y la navegación */
-      align-items: center; /* Alinea verticalmente el logo y la navegación */
-      height: 80px; /* Establece la altura fija de la barra de navegación */
-      padding: 0px; /* Ajusta el espaciado interno (padding) del navbar */
-      margin: 0; /* Elimina el margen externo del navbar */
+ 
   
-      .logo {
-        width: 82px; /* Ajusta el tamaño del logo según sea necesario */
-        padding: 0px;
-        margin: 82px;
-        }
-       }
-      }
-     
-     .main-nav {
-      display: flex;
-      gap: 50px; /* Espacio entre los enlaces de la navegación */
-      list-style: none; /* Elimina los puntos de la lista */
-      padding: 0px;
-      margin: 82px;
     
-      a {
-        color: $color-text; /* Color del texto por defecto */
-        text-decoration: none; /* Quita el subrayado del texto */
-        position: relative; /* Para el pseudo-elemento ::after */
-        padding: 5px 0; /* Espaciado vertical para el texto */
-        overflow: hidden; /* Asegura que la línea no se extienda fuera del enlace */
-      }    
-    }
-  
-  .abrir-menu{
-    display: none;
-  }
-  
-  footer {
-    background-color:#000000; 
-    color: $color-text; 
-    text-align: center; 
-    padding: 1rem; 
-    height: 180px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    box-sizing: border-box; 
-    align-items: flex-end;
-   
-  .footer1 {
-    margin: 0; 
-    font-family: $font-family-primary; 
-    font-size: $font-size-xsmall; 
-  }}
-
-  
-  /* Media Queries footer*/
-  @media (max-width: 700px) {
-    footer {
-      height: auto; /* Permite que el footer se ajuste al contenido en pantallas pequeñas */
-      padding: 0.5rem; /* Reduce el padding en pantallas pequeñas */
-
-      .footer1 {
-        font-size: $font-size-xxxsmall; /* Ajusta el tamaño de fuente en pantallas pequeñas */
-      }}
-    }
-  
-    /* Media Queries footer*/
-    @media (max-width: 1200px) {
-      footer {
-        height: auto; /* Permite que el footer se ajuste al contenido en pantallas pequeñas */
-        padding: 0.5rem; /* Reduce el padding en pantallas pequeñas */
-
-
-      .footer1 {
-        font-size: $font-size-xxxsmall; /* Ajusta el tamaño de fuente en pantallas pequeñas */
-      }}
-      }
   
 
 
- /* PSEUDOCLASE */
-/* Línea animada que aparece cuando el mouse está sobre el enlace */
-.main-nav a::after {
-  content: ''; /* Necesario para mostrar el pseudo-elemento */
-  position: absolute; /* Posiciona la línea */
-  bottom: 0; /* Alinea la línea en la parte inferior del enlace */
-  left: 50%; /* Comienza en el centro horizontal del enlace */
-  width: 0; /* Ancho inicial de la línea (0 para empezar desde el centro) */
-  height: 2px; /* Grosor de la línea */
-  background-color: $line-color; /* Color de la línea */
-  transition: width 0.3s ease, left 0.3s ease; /* Animaciones para el ancho y la posición */
-}
-
-/* Color y línea del enlace al hacer hover o focus */
-.main-nav a:hover::after,
-.main-nav a:focus::after {
-  color: $line-color; /* Cambia el color del texto al pasar el mouse */
-  width: 100%; /* Expande la línea para ocupar todo el ancho del enlace */
-  left: 0; /* Alinea la línea a la izquierda del enlace */
-}
-
-/* Clase activa para el enlace seleccionado */
-.main-nav a.active {
-  color: $line-color; /* Color del texto para el enlace activo */
-  border-bottom: 2px solid $line-color; /* Línea debajo del enlace activo */
-}
-
-.main-nav li {
-  margin: 0; /* Elimina el margen de los elementos de la lista */
-}
-
-/* Estilos para el menú desplegado en dispositivos pequeños */
-.navbar .main_nav {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  background-color: $background-color;
-}
-
-.navbar .main_nav.active {
-  display: flex;
-}
-
-.navbar .main_nav li {
-  margin: $gap-medium; /* Espaciado entre los elementos de la lista */
-  padding: $padding-small $padding-medium; /* Relleno de los elementos de la lista */
-  text-align: center;
-}
-
-.navbar .main_nav a {
-  color: $color-text; /* Color del texto del enlace en el menú desplegado */
-}
-
-
-  /* ESTILOS RESPONSIVOS */
-@media screen and (max-width: 900px) {
-  .abrir-menu, .cerrar-menu {
-    display: block;
-    position: absolute;
-    top: 31px; /* Ajusta para alinearse con la columna */
-    right: 0px; /* Ajusta para alinearse con el margen de la columna */
-    background: none;
-    border: 0;
-    color: $line-color;
-    font-size: $font-size-medium; /* Ajustado con la variable de tipografía */
-    cursor: pointer;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $background-color; /* Usar la variable de color de fondo */
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100px;
-    gap: 50px; /* Ajustado con la variable de espaciado */
-    padding: 50px; /* Ajustado con la variable de espaciado */
-    align-items: flex-end;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    margin-right: 0px; /* Agrega un margen derecho a la columna */
-    z-index: 1000;
-  }
-
-  .cerrar-menu {
-    right: 50px; 
-  }
-
-  .abrir-menu {
-    display: block;
-    position: absolute;
-    top: 30px; /* Ajusta para alinearse con la columna */
-    right: 10px; /* Ajusta para alinearse con el margen de la columna */
-    background: none;
-    border: none;
-  }
-
-  /* se hace visible el menú cuando se activa */
-  .nav-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 50px 0; /* Ajustado con la variable de espaciado */
-    width: 100%;
-  }
-
-  #cerrar {
-    display: none; /* Oculto por defecto */
-  }
-
-  .nav-visible #cerrar {
-    display: block; /* Muestra el botón de cerrar cuando el menú está visible */
-  }
-
-  .nav-visible #abrir {
-    display: none; /* Oculta el botón de abrir cuando el menú está visible */
-  }
-}
 
 /*PAGINA INICIO*/
 /* Sección cabañas */
@@ -248,8 +48,6 @@ body {
 
     img {
       width: 100%;
-      height: auto;
-      display: block;
       opacity: 0.7;
     }
   }
@@ -302,53 +100,7 @@ body {
   }
 }
 
-/* ESTILOS RESPONSIVOS */
-@media screen and (max-width: 900px) {
-  .cabanas {
-    .text-overlay {
-      h1 {
-        font-size:$font-size-small;
-        margin-bottom: 1rem;
-      }
 
-      p {
-        font-size: $font-size-xxxsmall;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .btn {
-      padding: 0.5rem 1rem;
-      font-size: 8px;
-    }
-  }
-}
-
-/* ESTILOS RESPONSIVOS */
-@media screen and (max-width: 485px) {
-  .cabanas {
-    .text-overlay {
-      h1 {
-        font-size: $font-size-small;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: $font-size-xxxsmall;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .btn {
-      padding: 0.5rem 1rem;
-      font-size: 8px;
-    }
-
-    .titulo1 {
-      font-size: $font-size-small;
-    }
-  }
-}
 
 
 
@@ -414,7 +166,7 @@ body {
 }
 
 /* ESTILOS RESPONSIVOS */
-@media screen and (max-width: 954px) {
+@media screen and (max-width: 900px) {
   .about {
     .about-content {
       flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
@@ -522,11 +274,6 @@ body {
     left: 0;
     padding: 3em;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
       li {
         margin: 30px 0;
 
@@ -540,7 +287,7 @@ body {
       }
     }
   }
-}
+
 
 
 
@@ -561,6 +308,7 @@ body {
 .imagen-servicio {
   width: 700px; 
   height: 385px; 
+   max-width: 100%;
 }
 .texto{
   font-size: 14px;
@@ -627,7 +375,6 @@ body {
   
   .text-overlay h1{
     font-size: $font-size-xxxsmall;
-    width: 300px;
   }
 
   .services {
@@ -697,62 +444,6 @@ body {
     text-align: center;
     max-width: 900px;
     background-color: rgba(32, 32, 32, 0.1); // Fondo semitransparente
-  }
-}
-
-/* Estilos generales para la sección de contacto */
-.contact {
-  display: flex;
-  justify-content: space-between;
-  padding: $padding-medium; /* Espaciado ajustado con variable */
-  
-  h2 {
-    color: $color-primary; /* Color primario */
-    margin-bottom: $gap-medium; /* Espaciado ajustado con variable */
-  }
-
-  .contact-form {
-    width: 45%;
-
-    form {
-      display: flex;
-      flex-direction: column;
-
-      label {
-        margin-bottom: $gap-small; /* Espaciado ajustado con variable */
-      }
-
-      input,
-      textarea {
-        margin-bottom: $gap-small; /* Espaciado ajustado con variable */
-        padding: $padding-small; /* Espaciado ajustado con variable */
-        border: none;
-        border-radius: 5px;
-      }
-
-      button {
-        padding: $padding-small $gap-medium; /* Espaciado ajustado con variables */
-        border: none;
-        border-radius: 5px;
-        background-color: #3C4E2E;
-        color: $color-text;
-        cursor: pointer;
-        font-size: $font-size-medium; /* Tamaño de fuente ajustado con variable */
-      }
-    }
-  }
-
-  .contact-info {
-    width: 45%;
-
-    p,
-    h3 {
-      margin-bottom: $gap-small; /* Espaciado ajustado con variable */
-    }
-
-    h3 {
-      color: $color-primary; /* Color primario */
-    }
   }
 }
 
