@@ -1,0 +1,11 @@
+/* Media Queries footer*/
+@media (max-width: 1200px) {
+    footer {
+      height: auto; /* Permite que el footer se ajuste al contenido en pantallas pequeñas */
+      padding: 0.5rem; /* Reduce el padding en pantallas pequeñas */
+
+
+    .footer1 {
+      font-size: $font-size-xxxsmall; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }}
+    }

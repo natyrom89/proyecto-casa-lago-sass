@@ -1,0 +1,27 @@
+//SECCION CABAÑAS
+@media screen and (max-width: 485px) {
+    .cabanas {
+      .text-overlay {
+        h1 {
+          font-size: $font-size-small;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          font-size: $font-size-xxxsmall;
+          margin-bottom: 1rem;
+        }
+      }
+  
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 8px;
+      }
+  
+      .titulo1 {
+        font-size: $font-size-small;
+      }
+    }
+  }
+  
+  

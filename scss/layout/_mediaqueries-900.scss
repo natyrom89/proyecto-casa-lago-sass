@@ -1,0 +1,97 @@
+  /* ESTILOS RESPONSIVOS MENU HAMBURGUESA*/
+  @media screen and (max-width: 900px) {
+    .abrir-menu, .cerrar-menu {
+      display: block;
+      position: absolute;
+      top: 31px; /* Ajusta para alinearse con la columna */
+      right: 0px; /* Ajusta para alinearse con el margen de la columna */
+      background: none;
+      border: 0;
+      color: $line-color;
+      font-size: $font-size-medium; /* Ajustado con la variable de tipografía */
+      cursor: pointer;
+    }
+  
+    .navbar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $background-color; /* Usar la variable de color de fondo */
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100px;
+      gap: 50px; /* Ajustado con la variable de espaciado */
+      padding: 50px; /* Ajustado con la variable de espaciado */
+      align-items: flex-end;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      margin-right: 0px; /* Agrega un margen derecho a la columna */
+      z-index: 1000;
+    }
+  
+    .cerrar-menu {
+      right: 50px; 
+    }
+  
+    .abrir-menu {
+      display: block;
+      position: absolute;
+      top: 30px; /* Ajusta para alinearse con la columna */
+      right: 10px; /* Ajusta para alinearse con el margen de la columna */
+      background: none;
+      border: none;
+    }
+  
+    /* se hace visible el menú cuando se activa */
+    .nav-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .main-nav {
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 50px 0; /* Ajustado con la variable de espaciado */
+      width: 100%;
+    }
+  
+    #cerrar {
+      display: none; /* Oculto por defecto */
+    }
+  
+    .nav-visible #cerrar {
+      display: block; /* Muestra el botón de cerrar cuando el menú está visible */
+    }
+  
+    .nav-visible #abrir {
+      display: none; /* Oculta el botón de abrir cuando el menú está visible */
+    }
+  }
+
+
+  //SECCION INICIO-CABAÑAS
+@media screen and (max-width: 900px) {
+    .cabanas {
+      .text-overlay {
+        h1 {
+          font-size:$font-size-small;
+          margin-bottom: 1rem;
+          width: 300px;
+        }
+  
+        p {
+          font-size: $font-size-xxxsmall;
+          margin-bottom: 1rem;
+          width: 300px;
+        }
+      }
+  
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 8px;
+      }
+    }
+  }
+  

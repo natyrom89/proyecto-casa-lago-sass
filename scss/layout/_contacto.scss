@@ -1,0 +1,55 @@
+/* Estilos generales para la sección de contacto */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-medium; /* Espaciado ajustado con variable */
+    
+    h2 {
+      color: $color-primary; /* Color primario */
+      margin-bottom: $gap-medium; /* Espaciado ajustado con variable */
+    }
+  
+    .contact-form {
+      width: 45%;
+  
+      form {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          margin-bottom: $gap-small; /* Espaciado ajustado con variable */
+        }
+  
+        input,
+        textarea {
+          margin-bottom: $gap-small; /* Espaciado ajustado con variable */
+          padding: $padding-small; /* Espaciado ajustado con variable */
+          border: none;
+          border-radius: 5px;
+        }
+  
+        button {
+          padding: $padding-small $gap-medium; /* Espaciado ajustado con variables */
+          border: none;
+          border-radius: 5px;
+          background-color: #3C4E2E;
+          color: $color-text;
+          cursor: pointer;
+          font-size: $font-size-medium; /* Tamaño de fuente ajustado con variable */
+        }
+      }
+    }
+  
+    .contact-info {
+      width: 45%;
+  
+      p,
+      h3 {
+        margin-bottom: $gap-small; /* Espaciado ajustado con variable */
+      }
+  
+      h3 {
+        color: $color-primary; /* Color primario */
+      }
+    }
+  }
