@@ -1,0 +1,17 @@
+footer {
+    background-color:#000000; 
+    color: $color-text; 
+    text-align: center; 
+    padding: 1rem; 
+    height: 180px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-sizing: border-box; 
+    align-items: flex-end;
+   
+  .footer1 {
+    margin: 0; 
+    font-family: $font-family-primary; 
+    font-size: $font-size-xsmall; 
+  }}
